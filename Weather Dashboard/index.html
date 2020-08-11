@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+
+<section>
+<form id="location search"> <input type='text' id='userInput'> 
+    <button id="searchSubmit">Search</button> 
+</form> 
+<div class="jumbotron" id="locationDump"></div>
+</section>
+
+
+<!-- display the results of the most recent user input -->
+<section id="currentDate">
+    <div class ="row" id="selectedLocation">
+        <div class ="col-md-12" id="currentDayBlock"></div>
+        <div class="card card-body bg-success" id ="currentForecast">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class ="locationDiv">
+                        <div class="currentDateDiv">Current Date:</div>
+                    </div>
+                </div>
+            </div>
+       
+            <div class="row">
+                <div class="col-md-6">
+                    <div id="icon"><img id="todayWincon" src="" alt="weather Icon"></div>
+                </div>
+            </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="text-center tempDiv">Temperature:</div>
+                <div class="text-center tempVal"></div>
+            </div>
+            <div class="col-md-3">
+                <div class="text-center humidityDiv">Humidity:</div>
+                <div class="text-center humidityVal"></div>
+            </div>
+            <div class="col-md-3">
+                <div class="text-center tempDiv">Temperature:</div>
+                <div class="text-center tempVal"></div>
+            </div>
+            <div class="col-md-3">
+                <div class="text-center windSpeedDiv">Wind Speed:</div>
+                <div class="text-center windSpeedVal"></div>
+            </div>
+            <div class="col-md-3">
+                <div class="text-center uvIndexDiv">UV Index:</div>
+                <div class="text-center uvIndexVal"></div>
+            </div>
+        </div>
+</section>
+
+<!-- display the fiveday forecast of the most recent -->
+<section id="fiveDayForecast">
+    <div class="card card-body bg-secondary" id="fiveDayDisplay">
+        <h3 class ="text-center">Five Day Forecast</h3>
+        <div class="row">
+
+            <!-- Day 1 start of 5 day display -->
+            <div class="col-sm-offset-1 bg-primary text-center">
+                <div class="card card-body day_1"></div>
+                <div class="text-center"><span id="currentDateDiv-1"></span></div>
+                <div id="icon-1"><img id="fiveDayWincon-1" src="" alt="weather icon"></div>
+                <div class="text-center">Temp:<span id="tempDiv-1"></span></div>
+                <div class="text-center">Humidity:<span id="humidityDiv-2"></span></div>
+            </div>
+        
+            <!-- Day 2  of 5 day display -->
+            <div class="col bg-secondary text-center">
+                <div class="card card-body day_2"></div>
+                <div class="text-center"><span id="currentDateDiv-2"></span></div>
+                <div id="icon-2"><img id="fiveDayWincon-1" src="" alt="weather icon"></div>
+                <div class="text-center">Temp:<span id="tempDiv-2"></span></div>
+                <div class="text-center">Humidity:<span id="humidityDiv-2"></span></div>
+            </div>
+        
+            <!-- Day 3 start of 5 day display -->
+            <div class="col bg-secondary text-center">
+                <div class="card card-body day_3"></div>
+                <div class="text-center"><span id="currentDateDiv-3"></span></div>
+                <div id="icon-3"><img id="fiveDayWincon-3" src="" alt="weather icon"></div>
+                <div class="text-center">Temp:<span id="tempDiv-3"></span></div>
+                <div class="text-center">Humidity:<span id="humidityDiv-3"></span></div>
+            </div>
+    
+            <!-- Day 4 start of 5 day display -->
+            <div class="col bg-secondary text-center">
+                <div class="card card-body day_4"></div>
+                <div class="text-center"><span id="currentDateDiv-4"></span></div>
+                <div id="icon-4"><img id="fiveDayWincon-4" src="" alt="weather icon"></div>
+                <div class="text-center">Temp:<span id="tempDiv-4"></span></div>
+                <div class="text-center">Humidity:<span id="humidityDiv-4"></span></div>
+            </div>
+        
+            <!-- Day 5 start of 5 day display -->
+            <div class="col bg-secondary text-center">
+                <div class="card card-body day_5"></div>
+                <div class="text-center"><span id="currentDateDiv-5"></span></div>
+                <div id="icon-5"><img id="fiveDayWincon-5" src="" alt="weather icon"></div>
+                <div class="text-center">Temp:<span id="tempDiv-5"></span></div>
+                <div class="text-center">Humidity:<span id="humidityDiv-5"></span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- local storage buttons of past location searches -->
+<section id="savedLocation">
+    <div id="displayLocation"></div>
+</section>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src ="API.js"></script>
+</body>
+</html>
